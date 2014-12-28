@@ -26,7 +26,7 @@ else:
         for entry in file[1:]:
             temp_entry=['' for _ in field_list] if entry[0] not in rolls else output[rolls.index(entry[0])]
             for val_nbr in range(len(entry)):
-                if temp_entry[temp_fields[val_nbr]]=='':
+                if str(entry[val_nbr])!='':
                     temp_entry[temp_fields[val_nbr]]=str(entry[val_nbr])
             if entry[0] not in rolls:
                 output.append(temp_entry)
