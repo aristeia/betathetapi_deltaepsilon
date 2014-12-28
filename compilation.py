@@ -11,7 +11,6 @@ if len(sys.argv) < 2:
 else:
     input = []
     for arg in sys.argv[1:]:
-        temp_file = open(arg)
-        input.append(map(lambda x: x.split(','),map(lambda x: x.strip(),temp_file.readlines())))
-        temp_file.close()
-    
+        with open(arg) as temp_file:
+            input.append(map(lambda x: x.strip().split(','),temp_file.readlines()))
+

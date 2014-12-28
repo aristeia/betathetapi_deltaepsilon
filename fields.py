@@ -1,17 +1,13 @@
 import sys
 from difflib import SequenceMatcher
 
-fields=[]
-
-
-
 class field:
     name=""
     alt_names=[]
     
-    def __init__(n="",alt=[]):
-        name=n
-        alt_names=alt
+    def __init__(self,name="",alt=[]):
+        self.name=name
+        self.alt_names=alt
 
 def print_all_fields():
     s = ""
@@ -25,11 +21,13 @@ def getField(input_field):
         return ""
     closeness = []
     for f in fields:
-        amp = len(f.alt_names) + 1
-        temp_close = SequenceMatcher(None, f.name, input_field).ratio()*amp
-        for x in f.alt_names:
-            temp_close+=SequenceMatcher(None, x, input_field).ratio()
-        temp_close/=((amp*2)-1) 
-        closeness.append((f,temp_close))
+        closeness.append((f,max([SequenceMatcher(None,x,input_field).ratio() for x in f.alt_names+[f.name]])))
     closeness.sort(key=lambda x:x[1], reverse=True)
-    return closeness[0][0]
+    return closeness[0][0].name
+
+
+fields=[]
+
+with open("fields.txt") as field_file:
+    fields=map((lambda x: field(name=str(x[0])) if len(x)==1 else field(name=str(x[0]),alt=map(lambda y:y.strip(),x[1:]))),map(lambda x:x.strip().split(','), field_file.readlines()))
+
