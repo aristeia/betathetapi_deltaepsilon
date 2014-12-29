@@ -1,22 +1,22 @@
 Roll number,roll,rll
 Last name,last,name
 First name,first
-Middle initial/name,mi,middle,middle name,middle initial,middle init, middle i
-Informal name, informal
+Middle initial/name,mi,middle
+Informal name
 Title,title
 Left beta,left
-Dead,dead,deceased,decease
+Dead,dead
 Do not contact for some other reason,do not call, don't call, don't email,do not contact
 Do not let anyone see this person's information even by request (confidentiality)
-Address line 1,addr,address,address 1,addr 1
-Address line 2,address 2,addr 2
+Address line 1,addr,address
+Address line 2
 City,town
-State,provence,territory
-Zip,zip code,zip,code
-Country,country,ctry,cont
-Initiated,init,initiation
-Grad year,grad,year
-Home phone number,home phone, number,nbr,phone
+State,provence
+Zip,zip code
+Country,country, ctry
+Initiated,init
+Grad year,grad
+Home phone number,home phone, number,nbr
 Cell phone number,cell,cell phone
 Office phone number,office,office phone
 Primary Email,email,personal email, Personal email
@@ -24,6 +24,6 @@ Alternative Email, alt email, business email,school email
 Company name,company
 Job title,job
 Athletics attr,athletics, athletics attribute, collegiate athletics
-Clubs/Orgs attr,clubs,organizations,clubs and organizations,Clubs/Organizations attribute,Clubs and Organizations attribute,Clubs/Orgs attribute,Clubs and Orgs attribute
+Clubs/Orgs attr,clubs,organizations, clubs and organizations
 Music attr,music,music attribute
 Study Abroad attr,study abroad,study abroad attribute
